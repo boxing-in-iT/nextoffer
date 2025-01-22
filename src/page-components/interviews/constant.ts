@@ -15,6 +15,9 @@ export const getTableItems = (intrviews: any[]): any[] =>
     actionButtons: {
       type: "component",
       component: ActionButtons,
+      props: {
+        id: intrview.id,
+      },
     },
   }));
 

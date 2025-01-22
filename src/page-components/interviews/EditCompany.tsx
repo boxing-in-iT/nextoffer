@@ -1,12 +1,16 @@
 "use client";
-
 import { useRouter } from "next/navigation";
-import { useState } from "react";
+import { FC, useState } from "react";
 import { FaBriefcase, FaLaptop } from "react-icons/fa";
 import { TbWorld } from "react-icons/tb";
 
-const SignupModal = () => {
+interface Props {
+  id: string;
+}
+
+export const EditInerviewModal: FC<Props> = ({ id }) => {
   const router = useRouter();
+
   const [company, setCompany] = useState("");
   const [jobDescription, setJobDescription] = useState("");
   const [language, setLanguage] = useState("English");
@@ -20,7 +24,6 @@ const SignupModal = () => {
     console.log({ company, jobDescription, language });
     // Обработайте данные здесь, например, отправьте их на сервер
   };
-
   return (
     <div
       className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50"
@@ -30,7 +33,7 @@ const SignupModal = () => {
         className="bg-white w-[600px] p-6 rounded-xl shadow-xl"
         onClick={(e) => e.stopPropagation()} // Остановить всплытие события
       >
-        <h2 className="text-4xl font-bold mb-4">⏰ Set up your interview</h2>
+        <h2 className="text-4xl font-bold mb-4">⏰ Edit your interview {id}</h2>
         <h3 className="text-xl text-gray-500">
           Type in the what company you are interviewing with and fow what
           position. This lets the AI know what kind of answers to suggest
@@ -102,5 +105,3 @@ const SignupModal = () => {
     </div>
   );
 };
-
-export default SignupModal;
