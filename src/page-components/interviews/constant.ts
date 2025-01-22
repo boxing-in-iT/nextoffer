@@ -2,7 +2,7 @@ import { Column } from "@/types/table";
 import { ActionButtons } from "./ActionButtons";
 
 interface Interview {
-  id: string;
+  id: number;
   company: string;
   position: string;
   created_at: string;

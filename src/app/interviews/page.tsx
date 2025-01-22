@@ -25,7 +25,13 @@ const Interviews = () => {
     },
   ];
 
-  const items = getTableItems(InterviewsData) as unknown as Row[];
+  const items = getTableItems(
+    InterviewsData.map((data) => ({
+      ...data,
+      credits_used: Number(data.credits_used), // Convert to number
+    }))
+  ) as unknown as Row[];
+
   return (
     <div>
       <Table>

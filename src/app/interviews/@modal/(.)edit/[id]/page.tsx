@@ -1,17 +1,10 @@
 import { EditInerviewModal } from "@/page-components/interviews/EditCompany";
 
-// Define a type for the params
-interface EditInterviewProps {
-  params: {
-    id: string;
-  };
-}
+type tParams = Promise<{ slug: string[] }>;
 
-const EditInterview = ({ params }: EditInterviewProps) => {
-  const { id } = params;
+export default async function EditInterview(props: { params: tParams }) {
+  const id = props;
   console.log("Id: ", id);
 
-  return <EditInerviewModal id={id} />;
-};
-
-export default EditInterview;
+  return <EditInerviewModal id={id.toString()} />;
+}
