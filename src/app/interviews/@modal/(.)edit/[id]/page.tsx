@@ -7,7 +7,7 @@ interface EditInterviewProps {
   };
 }
 
-const EditInterview = async ({ params }: EditInterviewProps) => {
+const EditInterview = ({ params }: EditInterviewProps) => {
   const { id } = params;
   console.log("Id: ", id);
 
