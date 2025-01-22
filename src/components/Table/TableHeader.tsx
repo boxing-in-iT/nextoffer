@@ -11,7 +11,7 @@ export const TableHeader: React.FC<Props> = ({ className, columns }) => (
       {columns.map((column) => (
         <th
           key={column.key}
-          className="border-b-1 border-white-lightgray px-4 pb-4 text-sm font-medium text-gray-regular"
+          className="border-b-1 border-white-lightgray px-4 pb-4   text-2xl font-bold text-gray-regular"
         >
           {column.label}
         </th>
