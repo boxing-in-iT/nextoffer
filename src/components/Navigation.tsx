@@ -1,3 +1,4 @@
+"use client";
 import { NavigationItem } from "./NavigationItem";
 
 import {
@@ -10,12 +11,14 @@ import ResumeManagerIcon from "@/assets/icons/ResumeManagerIcon.svg";
 import CreditsPlanIcon from "@/assets/icons/Settings.svg";
 import SupportIcon from "@/assets/icons/Mail.svg";
 import Image from "next/image";
+import { useRouter } from "next/router";
+import { usePathname } from "next/navigation";
 
-const USER_NAV_ITEMS: INavigationItem[] = [
+export const USER_NAV_ITEMS: INavigationItem[] = [
   {
     id: 1,
     label: "Dashboard",
-    path: "/dashboard",
+    path: "/",
     icon: HomeIcon,
   },
   {
@@ -33,7 +36,7 @@ const USER_NAV_ITEMS: INavigationItem[] = [
   {
     id: 4,
     label: "Credits & Plan",
-    path: "/resume",
+    path: "/credits",
     icon: CreditsPlanIcon,
   },
   {
@@ -45,11 +48,18 @@ const USER_NAV_ITEMS: INavigationItem[] = [
 ];
 
 export const Navigation = () => {
+  const pathname = usePathname();
+
+  console.log("pathname", pathname);
   return (
     <nav>
       <ul className="flex flex-col gap-4">
         {USER_NAV_ITEMS.map((item) => (
-          <NavigationItem key={item.id} item={item} />
+          <NavigationItem
+            key={item.id}
+            item={item}
+            isActive={pathname === item.path}
+          />
         ))}
       </ul>
     </nav>
