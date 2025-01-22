@@ -1,13 +1,13 @@
 // "use client";
 import Link from "next/link";
-import Image from "next/image";
+
 // import { usePathname } from "next/navigation";
 
 interface Props {
   item: {
     label: string;
     path: string;
-    icon: any;
+    icon: React.ComponentType<React.SVGProps<SVGSVGElement>>; // or React.FC
   };
   isActive: boolean;
 }

@@ -13,10 +13,8 @@ export interface StyledValue {
 
 export interface ComponentValue {
   type: "component";
-  component: React.FC<{ [key: string]: any }>;
-  props?: {
-    [key: string]: string | number;
-  };
+  component: React.ComponentType<{ [key: string]: string | number }>; // Specify the component type
+  props?: { [key: string]: string | number }; // props can be string or number, as per your existing structure
 }
 
 export type RowValue = Date | string | number | StyledValue | ComponentValue;

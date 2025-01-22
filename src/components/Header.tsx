@@ -1,10 +1,8 @@
 "use client";
 
-import Image from "next/image";
 import Logo from "../assets/logo.svg";
 import { usePathname, useRouter } from "next/navigation";
 import { USER_NAV_ITEMS } from "./Navigation";
-import Link from "next/link";
 
 export const Header = () => {
   const pathname = usePathname();

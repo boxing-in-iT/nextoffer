@@ -29,10 +29,16 @@ export const getKeyValue = (
   return null;
 };
 
-const isComponentValue = (value: any): value is ComponentValue => {
-  return value?.type === "component";
+const isComponentValue = (value: unknown): value is ComponentValue => {
+  return (value as ComponentValue)?.type === "component";
 };
 
-const isStyledValue = (value: any): value is StyledValue => {
-  return value && "value" in value && "style" in value;
+const isStyledValue = (value: unknown): value is StyledValue => {
+  // First, ensure value is an object before checking for properties
+  return (
+    typeof value === "object" &&
+    value !== null &&
+    "value" in value &&
+    "style" in value
+  );
 };

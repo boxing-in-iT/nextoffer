@@ -1,4 +1,3 @@
-import Image from "next/image";
 import UserIcon from "@/assets/icons/User.svg";
 import { Navigation } from "./Navigation";
 

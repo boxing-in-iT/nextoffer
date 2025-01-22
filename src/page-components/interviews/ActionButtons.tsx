@@ -1,7 +1,7 @@
 "use client";
 import { FC } from "react";
 import EditIcon from "@/assets/icons/EditIcon.svg";
-import cn from "classnames";
+
 import { useRouter } from "next/navigation";
 
 interface Props {

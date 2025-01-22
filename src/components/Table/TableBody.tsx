@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import { Sizes } from "@/types/sizes";
+
 import { TableRow } from "./TableRow";
 import { Column, Row } from "@/types/table";
 

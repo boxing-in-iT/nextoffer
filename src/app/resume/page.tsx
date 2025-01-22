@@ -35,7 +35,9 @@ const ResumePage: FC = () => {
           className="border-dashed border-2 border-gray-400 p-10 text-center cursor-pointer w-1/4 mt-6"
         >
           <input {...getInputProps()} />
-          <p>Drag 'n' drop your files here, or click to select files</p>
+          <p>
+            Drag &apos;n&apos; drop your files here, or click to select files
+          </p>
         </div>
       </div>
     </div>

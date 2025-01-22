@@ -1,6 +1,14 @@
 import { Column } from "@/types/table";
 import { ActionButtons } from "./ActionButtons";
 
+interface Interview {
+  id: string;
+  company: string;
+  position: string;
+  created_at: string;
+  credits_used: number;
+}
+
 export const ALL_INTERVIEWS_COLUMNS: Column[] = [
   { key: "company", label: "Company" },
   { key: "position", label: "Position" },
@@ -9,7 +17,7 @@ export const ALL_INTERVIEWS_COLUMNS: Column[] = [
   { key: "actionButtons", label: "" },
 ];
 
-export const getTableItems = (intrviews: any[]): any[] =>
+export const getTableItems = (intrviews: Interview[]): Interview[] =>
   intrviews.map((intrview) => ({
     ...intrview,
     actionButtons: {

@@ -1,17 +1,13 @@
 "use client";
 import { NavigationItem } from "./NavigationItem";
 
-import {
-  INavigationItem,
-  INavigationItemProps,
-} from "@/types/INavigationItemProps";
+import { INavigationItem } from "@/types/INavigationItemProps";
 import HomeIcon from "@/assets/icons/Home.svg";
 import Phone from "@/assets/icons/Phone.svg";
 import ResumeManagerIcon from "@/assets/icons/ResumeManagerIcon.svg";
 import CreditsPlanIcon from "@/assets/icons/Settings.svg";
 import SupportIcon from "@/assets/icons/Mail.svg";
-import Image from "next/image";
-import { useRouter } from "next/router";
+
 import { usePathname } from "next/navigation";
 
 export const USER_NAV_ITEMS: INavigationItem[] = [

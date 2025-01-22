@@ -15,7 +15,7 @@ export const Card: FC<Props> = ({ time, description, price, variant }) => {
   return (
     <div
       className={cn(
-        "w-[300px] bg-[#C5C6C64F] h-[300px] rounded-lg flex flex-col items-center justify-around p-5",
+        "w-[300px]  h-[225px] rounded-lg flex flex-col items-center justify-around p-5",
         CARD_STYLE_VARIANTS[variant]
       )}
     >
@@ -24,8 +24,7 @@ export const Card: FC<Props> = ({ time, description, price, variant }) => {
       <p className="text-xl font-bold">{price}</p>
       <button
         className={cn(
-          "w-32 h-8 flex justify-center items-center rounded-lg py-2 text-white font-bold text-xl"
-          // Применяем стиль в зависимости от варианта
+          "w-40 h-12 flex justify-center items-center rounded-lg py-2 bg-[#2C2C2C] text-white font-bold text-xl"
         )}
       >
         Get Credits
