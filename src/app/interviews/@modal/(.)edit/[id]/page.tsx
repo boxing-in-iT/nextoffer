@@ -1,6 +1,13 @@
 import { EditInerviewModal } from "@/page-components/interviews/EditCompany";
 
-const EditInterview = async ({ params }: { params: { id: string } }) => {
+// Define a type for the params
+interface EditInterviewProps {
+  params: {
+    id: string;
+  };
+}
+
+const EditInterview = async ({ params }: EditInterviewProps) => {
   const { id } = params;
   console.log("Id: ", id);
 
