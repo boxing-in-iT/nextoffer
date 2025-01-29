@@ -31,7 +31,7 @@ const CaptureScreen: React.FC = () => {
           className="px-4 py-2 text-white bg-blue-500 rounded hover:bg-blue-600"
           onClick={startCapture}
         >
-          Старт захвата
+          Старт захвата Это для теста
         </button>
       ) : (
         <div>
