@@ -6,11 +6,13 @@ const DEFAULT_BUTTON_CLASSNAME = "rounded-20 text-sm font-semibold";
 
 export const CARD_STYLE_VARIANTS = {
   [CardVariants.POPULAR]: cn(
-    "bg-[#3A4AFF99] text-white-base",
+    "relative bg-white shadow-xl rounded-xl border border-purple-base",
+    "before:content-[''] before:absolute before:inset-0 before:-z-10",
+    "before:bg-gradient-to-r before:from-[#7dd3fc] before:to-[#bef264] before:blur-lg",
     DEFAULT_BUTTON_CLASSNAME
   ),
   [CardVariants.REGULAR]: cn(
-    "bg-[#3A4AFF42] border border-purple-base ",
+    "bg-transparent shadow-xl rounded-xl border border-purple-base ",
     DEFAULT_BUTTON_CLASSNAME
   ),
 };
