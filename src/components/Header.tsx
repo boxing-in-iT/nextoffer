@@ -3,6 +3,7 @@
 import Logo from "../assets/logo.svg";
 import { usePathname, useRouter } from "next/navigation";
 import { USER_NAV_ITEMS } from "./Navigation";
+import { Button } from "./Button/Button";
 
 export const Header = () => {
   const pathname = usePathname();
@@ -38,12 +39,20 @@ export const Header = () => {
 
         {/* Кнопка (только для Interviews) */}
         {currentPage === "Interviews" && (
-          <button
-            onClick={openSignUpInterview}
-            className="bg-green-600 hover:bg-green-700 text-white font-medium px-5 py-2 rounded-lg shadow-md transition-all"
-          >
-            Start Interview
-          </button>
+          <div className="flex gap-2">
+            <button
+              onClick={openSignUpInterview}
+              className="bg-white hover:bg-gray-100  font-medium px-5 py-2 rounded-lg shadow-md transition-all"
+            >
+              Start Interview
+            </button>
+            <button
+              onClick={openSignUpInterview}
+              className="bg-green-600 hover:bg-green-700 text-white font-medium px-5 py-2 rounded-lg shadow-md transition-all"
+            >
+              Start Interview
+            </button>
+          </div>
         )}
       </div>
     </header>

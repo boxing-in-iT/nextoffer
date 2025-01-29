@@ -1,15 +1,12 @@
 "use client";
-import { useRouter } from "next/navigation";
+import { useParams, useRouter } from "next/navigation";
 import { FC, useState } from "react";
 import { FaBriefcase, FaLaptop } from "react-icons/fa";
 import { TbWorld } from "react-icons/tb";
 
-interface Props {
-  id: string;
-}
-
-export const EditInerviewModal: FC<Props> = ({ id }) => {
+export const EditInerviewModal: FC = () => {
   const router = useRouter();
+  const { id } = useParams();
 
   const [company, setCompany] = useState("");
   const [jobDescription, setJobDescription] = useState("");
