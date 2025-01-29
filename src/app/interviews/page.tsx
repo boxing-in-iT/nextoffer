@@ -5,6 +5,8 @@ import {
   ALL_INTERVIEWS_COLUMNS,
   getTableItems,
 } from "@/page-components/interviews/constant";
+import CaptureScreen from "@/page-components/interviews/InterviewPage";
+
 import { Row } from "@/types/table";
 
 const Interviews = () => {
@@ -38,6 +40,8 @@ const Interviews = () => {
         <TableHeader columns={ALL_INTERVIEWS_COLUMNS} />
         <TableBody items={items} columns={ALL_INTERVIEWS_COLUMNS} />
       </Table>
+
+      <CaptureScreen />
     </div>
   );
 };

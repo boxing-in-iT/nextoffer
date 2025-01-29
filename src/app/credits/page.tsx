@@ -1,4 +1,4 @@
-import { Card } from "@/components/Button/Card";
+import { Card } from "@/components/Card/Card";
 import { FC } from "react";
 import { CardVariants } from "./types";
 

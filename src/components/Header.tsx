@@ -18,20 +18,32 @@ export const Header = () => {
   };
 
   return (
-    <header className="w-full flex gap-5 min-h-24 border-b-2  border-[#CAC4D0] ">
-      <div className="flex min-w-72 h-full justify-start items-center  border-r-2 border-[#CAC4D0] px-5">
-        {/* <Image src={logo} alt="Описание изображения" width={75} height={75} /> */}
-        <Logo />
-        <p className=" font-bold text-[36px]">NextOffer</p>
+    <header className="w-full flex items-center min-h-20 border-b-[0.5px] border-gray-300 bg-white shadow-sm">
+      {/* Левая часть: Логотип и название */}
+      <div className="flex min-w-72 h-full items-center border-r-[0.5px] border-gray-300 px-6">
+        <Logo className="w-12 h-12" />
+        <p
+          className="ml-3 text-3xl font-bold bg-clip-text text-transparent"
+          style={{
+            backgroundImage: "linear-gradient(45deg,  #2a3736, #2CA6A4)", // Цвета из логотипа
+          }}
+        >
+          NextOfferAI
+        </p>
       </div>
-      <div className="flex w-full justify-between items-center">
-        <p className=" font-bold text-[36px]">{currentPage}</p>
+
+      {/* Центр: Заголовок страницы */}
+      <div className="flex w-full justify-between items-center px-6">
+        <p className="text-xl font-semibold text-gray-700">{currentPage}</p>
+
+        {/* Кнопка (только для Interviews) */}
         {currentPage === "Interviews" && (
-          <div className="pr-5 " onClick={openSignUpInterview}>
-            <button className="bg-[#009951] rounded-lg text-white px-5 py-2">
-              Start interview
-            </button>
-          </div>
+          <button
+            onClick={openSignUpInterview}
+            className="bg-green-600 hover:bg-green-700 text-white font-medium px-5 py-2 rounded-lg shadow-md transition-all"
+          >
+            Start Interview
+          </button>
         )}
       </div>
     </header>

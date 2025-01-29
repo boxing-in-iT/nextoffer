@@ -1,3 +1,5 @@
+import { Title } from "@/components/Title";
+
 export default function Home() {
   return (
     <div className="min-h-[100vh] bg-purple-50 p-8">
@@ -11,7 +13,7 @@ export default function Home() {
 
           <div className="bg-white p-6 rounded-lg shadow-md min-h-[175px]">
             <p>
-              Upload your resume so ParakeetAI can generate custom answers to
+              Upload your resume so NextOfferAIAI can generate custom answers to
               the job interview questions.
             </p>
           </div>
@@ -27,7 +29,7 @@ export default function Home() {
 
           <div className="bg-white p-6 rounded-lg shadow-md min-h-[175px]">
             <p>
-              See how easy ParakeetAI is to use. Trial Sessions are free and
+              See how easy NextOfferAIAI is to use. Trial Sessions are free and
               limited to 10 minutes.
             </p>
           </div>
@@ -52,8 +54,8 @@ export default function Home() {
           </h2>
           <div className="bg-white p-6 rounded-lg shadow-md min-h-[175px]">
             <p>
-              Use ParakeetAI for a real interview to get the job you have always
-              dreamed of.
+              Use NextOfferAIAI for a real interview to get the job you have
+              always dreamed of.
             </p>
           </div>
           <button className="mt-4 px-4 py-2 bg-gray-200 text-gray-700 rounded w-full">
@@ -64,17 +66,21 @@ export default function Home() {
 
       <hr className="my-12 border-gray-300" />
 
-      {/* Video */}
-      <div className="flex justify-center items-start">
-        <div className="w-[600px] h-[400px]">
-          <iframe
-            className="w-full h-full"
-            src="https://www.youtube.com/embed/dQw4w9WgXcQ" // Replace with your video URL
-            title="ParakeetAI In-Depth Tutorial"
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-          ></iframe>
+      <div className="w-full flex flex-col items-center ">
+        <Title title="How NextOfferAI Works 🤖" subtitle="" />
+
+        {/* Video */}
+        <div className="flex justify-center items-start mt-5">
+          <div className="w-[600px] h-[400px]">
+            <iframe
+              className="w-full h-full"
+              src="https://www.youtube.com/embed/dQw4w9WgXcQ" // Replace with your video URL
+              title="NextOfferAIAI In-Depth Tutorial"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            ></iframe>
+          </div>
         </div>
       </div>
     </div>
