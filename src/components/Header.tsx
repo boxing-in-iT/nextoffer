@@ -3,7 +3,6 @@
 import Logo from "../assets/logo.svg";
 import { usePathname, useRouter } from "next/navigation";
 import { USER_NAV_ITEMS } from "./Navigation";
-import { Button } from "./Button/Button";
 
 export const Header = () => {
   const pathname = usePathname();

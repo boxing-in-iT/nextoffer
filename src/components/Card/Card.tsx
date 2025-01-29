@@ -14,7 +14,7 @@ interface Props {
 export const Card: FC<Props> = ({
   time,
   description,
-  credit,
+
   price,
   variant,
 }) => {
