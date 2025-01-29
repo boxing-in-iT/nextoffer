@@ -18,18 +18,7 @@ interface Props {
 }
 
 export const Button: FC<Props> = memo(
-  ({
-    children,
-    className,
-    isLoading,
-    variant,
-    size,
-    type,
-    leaderSize,
-    isDisabled,
-    onClick,
-    form,
-  }) => {
+  ({ children, className, variant, size, type, isDisabled, onClick, form }) => {
     const combinedClassNames = cn(
       "flex justify-center items-center outline-0 transition ease-in-out duration-200 active:translate-y-0.5 active:duration-150 active:brightness-95 disabled:opacity-50 disabled:active:translate-y-0 disabled:brightness-100",
       variant ? BUTTON_STYLE_VARIANTS[variant] : "",
@@ -50,3 +39,5 @@ export const Button: FC<Props> = memo(
     );
   }
 );
+
+Button.displayName = "Button";

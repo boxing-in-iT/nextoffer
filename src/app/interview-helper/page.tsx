@@ -39,7 +39,7 @@ const InterviewPage: React.FC = () => {
         setAudioChunks([]);
       };
     }
-  }, [stream]);
+  }, [stream, audioChunks]);
 
   const handleStartRecording = () => {
     if (recorder && !recording) {
