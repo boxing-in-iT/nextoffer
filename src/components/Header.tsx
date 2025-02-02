@@ -11,6 +11,8 @@ export const Header = () => {
     USER_NAV_ITEMS.find((item) => item.path === pathname)?.label ||
     "Unknown Page";
 
+  const isLoginPage = pathname === "/login";
+
   const router = useRouter();
 
   const openSignUpInterview = () => {
@@ -18,7 +20,11 @@ export const Header = () => {
   };
 
   return (
-    <header className="w-full flex items-center min-h-20 border-b-[0.5px] border-gray-300 bg-white shadow-sm">
+    <header
+      className={`w-full  items-center min-h-20 border-b-[0.5px] border-gray-300 bg-white shadow-sm ${
+        isLoginPage ? "hidden" : "flex"
+      }`}
+    >
       {/* Левая часть: Логотип и название */}
       <div className="flex min-w-72 h-full items-center border-r-[0.5px] border-gray-300 px-6">
         <Logo className="w-12 h-12" />

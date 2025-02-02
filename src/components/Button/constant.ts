@@ -6,7 +6,7 @@ const DEFAULT_BUTTON_CLASSNAME = "rounded-20 text-sm font-semibold";
 
 export const BUTTON_STYLE_VARIANTS = {
   [ButtonVariants.PRIMARY]: cn(
-    "bg-purple-base text-white-base",
+    "bg-[#2C2C2C] hover:bg-[#3F3F3F] text-white ",
     DEFAULT_BUTTON_CLASSNAME
   ),
   [ButtonVariants.SECONDARY]: cn(

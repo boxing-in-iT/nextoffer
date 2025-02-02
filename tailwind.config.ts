@@ -11,6 +11,9 @@ export default {
       colors: {
         "custom-gray": "#2C2C2C",
       },
+      backgroundImage: {
+        "login-banner": "url('/src/assets/images/login/bg.png')",
+      },
     },
   },
   plugins: [],

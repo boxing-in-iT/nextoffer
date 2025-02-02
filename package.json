@@ -9,7 +9,10 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "axios": "^1.7.9",
     "classnames": "^2.5.1",
+    "formik": "^2.4.6",
+    "js-cookie": "^3.0.5",
     "lucide-react": "^0.474.0",
     "next": "^15.1.5",
     "peerjs": "^1.5.4",
@@ -17,15 +20,22 @@
     "react-dom": "^19.0.0",
     "react-dropzone": "^14.3.5",
     "react-icons": "^5.4.0",
-    "simple-peer": "^9.11.1"
+    "react-input-mask": "^2.0.4",
+    "react-phone-number-input": "^3.4.11",
+    "react-toastify": "^11.0.3",
+    "simple-peer": "^9.11.1",
+    "yup": "^1.6.1",
+    "zustand": "^5.0.3"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
     "@svgr/webpack": "^8.1.0",
     "@types/classnames": "^2.3.4",
+    "@types/js-cookie": "^3.0.6",
     "@types/node": "^20",
     "@types/react": "^19.0.7",
     "@types/react-dom": "^19.0.3",
+    "@types/react-input-mask": "^3.0.6",
     "@types/webrtc": "^0.0.44",
     "eslint": "^9",
     "eslint-config-next": "15.1.4",

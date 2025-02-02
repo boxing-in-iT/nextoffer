@@ -1,9 +1,18 @@
+"use client";
 import UserIcon from "@/assets/icons/User.svg";
 import { Navigation } from "./Navigation";
+import { usePathname } from "next/navigation";
 
 export const Sidebar = () => {
+  const pathname = usePathname();
+  const isLoginPage = pathname === "/login";
+
   return (
-    <aside className="min-w-72 h-[90vh] flex flex-col justify-between border-r border-gray-200 bg-white rounded-l-3xl">
+    <aside
+      className={`min-w-72 h-[90vh] flex flex-col justify-between border-r border-gray-200 bg-white rounded-l-3xl ${
+        isLoginPage ? "hidden" : ""
+      }`}
+    >
       <div className="p-6">
         <Navigation />
       </div>
